@@ -1,0 +1,174 @@
+.account-settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "Segoe UI", sans-serif;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  overflow: hidden;
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.header-image {
+  background-image: url("https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0");
+  background-size: cover;
+  background-position: center;
+  padding: 76px 20px;
+  color: white;
+  font-weight: bold;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+}
+
+.profile-container {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.profile-pic {
+  width: clamp(80px, 15vw, 120px);
+  height: clamp(80px, 15vw, 120px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  margin-top: clamp(-40px, -8vw, -60px);
+  box-shadow: 0 0 5px #ccc;
+}
+
+.settings-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 100%;
+}
+
+.settings-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  gap: 8px;
+}
+
+.settings-form input,
+.settings-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: clamp(14px, 1.5vw, 16px);
+  color: #333;
+  background-color: #dddeee80;
+}
+
+.save-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: clamp(10px, 2vw, 15px);
+  font-size: clamp(14px, 1.5vw, 16px);
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  grid-column: 1 / -1;
+  max-width: 200px;
+  justify-self: center;
+}
+
+.save-btn:hover {
+  background-color: darkred;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .account-settings {
+    margin: 15px;
+  }
+
+  .settings-form {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-image {
+    padding: 30px 15px;
+  }
+
+  .profile-container {
+    padding: 15px;
+  }
+
+  .settings-form {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .account-settings {
+    margin: 10px;
+  }
+
+  .header-image {
+    padding: 20px 10px;
+  }
+
+  .profile-container {
+    padding: 10px;
+  }
+
+  .settings-form {
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .settings-form input,
+  .settings-form select {
+    padding: 10px;
+  }
+
+  .save-btn {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .save-btn {
+    transition: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .account-settings {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .settings-form input,
+  .settings-form select {
+    background-color: #dddeee80;
+    color: black;
+    border-color: #dddeee80;
+  }
+}
+
+/* Print styles */
+@media print {
+  .account-settings {
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .save-btn {
+    display: none;
+  }
+}

@@ -1,0 +1,194 @@
+.studentFees-layout {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  gap: 10px;
+  min-height: unset;
+  width: 100%;
+  max-width: 1920px;
+}
+
+.studentFees-table-section {
+  flex: 1;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
+
+.studentFees-heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #333;
+  text-align: left;
+}
+
+.studentFees-search-form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: #fdfdfd;
+  border-radius: 6px;
+}
+
+.studentFees-search-input,
+.studentFees-search-select {
+ flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 15px;
+  color: #555;
+  background-color: #dddeee80;
+}
+
+.studentFees-search-input::placeholder {
+  color: #999;
+}
+
+.studentFees-search-button {
+  background-color: #d50000;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+}
+
+.studentFees-search-button:hover {
+  background-color: #b00000;
+}
+
+.studentFees-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.studentFees-table th,
+.studentFees-table td {
+  border-bottom: 1px solid #eee;
+  padding: 18px 15px;
+  font-size: 15px;
+  text-align: left;
+  color: #444;
+}
+
+.studentFees-table th:last-child,
+.studentFees-table td:last-child {
+  text-align: center;
+  width: 100px;
+}
+
+.studentFees-table thead th {
+  background-color: #f8f8f8;
+  font-weight: 700;
+  color: red;
+  text-transform: uppercase;
+  font-style: normal;
+  padding: 15px;
+  border-bottom: 2px solid #ddd;
+}
+
+.studentFees-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.studentFees-table tbody tr:hover {
+  background-color: #fefefe;
+  cursor: default;
+}
+
+.status-pill {
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 70px;
+  box-sizing: border-box;
+}
+
+.status-unpaid {
+  background: #dc3545;
+}
+
+.status-paid {
+  background: #4682b4;
+}
+
+.studentFees-pagination {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  align-items: center;
+}
+
+.pagination-button {
+  border: 1px solid #ddd;
+  padding: 8px 14px;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 15px;
+  color: #555;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.pagination-button:hover:not(.active):not(:disabled) {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+}
+
+.pagination-button.active {
+  background-color: #d50000;
+  color: white;
+  font-weight: bold;
+  border-color: #d50000;
+}
+
+.pagination-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+  color: #aaa;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.action-buttons i {
+    cursor: pointer;
+    padding: 5px;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.action-buttons .fa-eye:hover {
+    color: #14238a;
+}
+
+.action-buttons .fa-pen-to-square:hover {
+    color: #d50000;
+}
+
+footer {
+  width: 100%;
+  margin-top: 20px;
+}

@@ -1,0 +1,409 @@
+.Students-layout {
+  display: flex;
+  padding: 20px;
+  background-color: #f0f1f3;
+  gap: 20px;
+  /* min-height: 100vh; */
+  box-sizing: border-box;
+}
+
+.Students-table-section {
+  flex: 2;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.Students-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.Students-search-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.Students-search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #dddeee80;
+}
+
+.Students-class-dropdown {
+  background-color: #dddeee80;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1;
+}
+.Students-search-button {
+  background-color: #d50000;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.Students-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.Students-table th,
+.Students-table td {
+  border: none; /* Removed lines */
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  text-align: left;
+}
+
+.Students-table thead th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+  color: #333;
+}
+
+.Students-table tbody tr:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.Students-pagination {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.pagination-button {
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination-button.active {
+  background-color: #d50000;
+  color: white;
+  font-weight: bold;
+}
+
+
+/* Basic styling for the student list */
+.student-list-container {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.student-list-container h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.student-items {
+  list-style: none;
+  padding: 0;
+}
+
+.student-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.student-item:last-child {
+  border-bottom: none;
+}
+
+.student-item:hover {
+  background-color: #f5f5f5;
+}
+
+.student-item-id {
+  font-weight: bold;
+  color: #14238a; /* Blue accent */
+  width: 50px; /* Fixed width for ID */
+}
+
+.student-item-name {
+  flex-grow: 1;
+  margin-left: 20px;
+  color: #333;
+}
+
+.student-item-click-indicator {
+  font-size: 0.8em;
+  color: #888;
+}
+
+/* Add Responsive Table Container */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+    .Students-table th,
+    .Students-table td {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .Students-search-form {
+        flex-direction: column;
+    }
+
+    .Students-search-input,
+    .Students-class-dropdown,
+    .Students-search-button {
+        width: 100%;
+    }
+
+    .Students-search-button {
+        padding: 12px;
+    }
+
+    /* Add scroll indicator for table */
+    .Students-table-section::after {
+        content: '← Scroll →';
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 768px) {
+    .Students-layout {
+        padding: 10px;
+    }
+
+    .Students-table-section {
+        padding: 15px;
+    }
+
+    .Students-heading {
+        font-size: 18px;
+    }
+
+    .Students-pagination {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .pagination-button {
+        padding: 8px;
+        min-width: 35px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Students-layout {
+        padding: 5px;
+    }
+
+    .Students-table-section {
+        padding: 10px;
+    }
+
+    .Students-heading {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .Students-table th,
+    .Students-table td {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    /* Adjust which columns to hide on mobile */
+    .Students-table th:nth-child(6),
+    .Students-table td:nth-child(6),
+    .Students-table th:nth-child(7),
+    .Students-table td:nth-child(7) {
+        display: none;
+    }
+}
+
+/* Loading State */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+/* Modal Responsive Styles */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10px;
+        max-height: 90vh;
+    }
+
+    .modal-header {
+        padding: 15px;
+    }
+
+    .modal-body {
+        padding: 15px;
+    }
+
+    .student-details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #d50000;
+    cursor: pointer;
+}
+
+.student-profile-card {
+    padding: 10px 0;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.profile-photo-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #14238a;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info-text {
+    flex: 1;
+}
+
+.profile-info-text h2 {
+    margin: 0 0 8px 0;
+    color: #14238a;
+    font-size: 2rem;
+}
+
+.profile-info-text p {
+    color: #555;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.profile-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 12px 16px;
+}
+
+.detail-label {
+    color: #888;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.detail-value {
+    color: #222;
+    font-size: 1.08rem;
+    font-weight: 600;
+    word-break: break-all;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .profile-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    .profile-photo-circle {
+        margin-bottom: 10px;
+    }
+    .profile-details-grid {
+        grid-template-columns: 1fr;
+    }
+}

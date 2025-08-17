@@ -1,0 +1,147 @@
+.Teachers-layout {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.Teachers-table-section {
+  flex: 2;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.Teachers-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.Teachers-search-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.Teachers-search-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #dddeee80;
+}
+
+.Teachers-class-dropdown {
+  background-color: #dddeee80;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1;
+}
+
+.Teachers-search-button {
+  background-color: #d50000;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.Teachers-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.Teachers-table th,
+.Teachers-table td {
+  border: none; /* Removed lines */
+  padding: 15px;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: left;
+}
+
+.Teachers-table thead th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+  color: #333;
+}
+
+.Teachers-table tbody tr:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.Teachers-table td:last-child {
+  text-align: center;
+  width: 100px;
+}
+
+.Teachers-table th:last-child {
+  text-align: center;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.action-buttons i {
+  cursor: pointer;
+  padding: 5px;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.action-buttons .fa-eye:hover {
+  color: #14238a;
+}
+
+.action-buttons .fa-pen-to-square:hover {
+  color: #d50000;
+}
+
+.expense-pagination {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  align-items: center;
+}
+
+.pagination-button {
+  border: 1px solid #ddd;
+  padding: 8px 14px;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 15px;
+  color: #555;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.pagination-button:hover:not(.active):not(:disabled) {
+  background-color: #f0f0f0;
+  border-color: #ccc;
+}
+
+.pagination-button.active {
+  background-color: #d50000;
+  color: white;
+  font-weight: bold;
+  border-color: #d50000;
+}
+
+.pagination-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f5f5f5;
+  color: #aaa;
+}

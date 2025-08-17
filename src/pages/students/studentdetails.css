@@ -1,0 +1,196 @@
+/* Overlay for the modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top of everything */
+}
+
+/* Content area of the modal */
+.modal-content {
+  background-color: #f0f2f5; /* Light grey background from image */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 30%; /* Responsive width */
+  height: 100vh;
+  /* max-width: 800px; Max width to keep it readable */
+  max-height: 90vh; /* Max height for scrollable content */
+  overflow-y: auto; /* Enable scrolling for long content */
+  font-family: "Poppins", sans-serif; /* Assuming Poppins font */
+}
+
+/* Close button style */
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease-in-out;
+}
+
+.modal-close-btn:hover {
+  color: #d60a0b; /* Red accent on hover */
+}
+
+/* Loading and error messages inside the modal */
+.modal-loading,
+.modal-error {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1rem;
+  color: #555;
+}
+.modal-error {
+  color: #d60a0b;
+}
+
+/* Student Profile Card styling (based on image_72faf5.png)*/
+.student-profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.school-logo {
+  width: 50px; /* Adjust size as needed */
+  height: 50px;
+  margin-bottom: 20px;
+  align-self: flex-start; /* Align logo to the start */
+}
+
+.school-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.profile-header {
+  display: flex;
+  align-items: flex-start; /* Align top of photo with top of text */
+  gap: 30px; /* Space between photo and text */
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.profile-photo-circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.student-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+.photo-placeholder-initials {
+  font-size: 4rem;
+  color: #888;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.profile-info-text {
+  flex-grow: 1; /* Allows text to take available space */
+}
+
+.profile-info-text h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.profile-info-text p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.profile-details-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 400px); /* Two columns for details */
+  gap: 20px 50px; /* Row gap 20px, column gap 50px */
+  width: 100%;
+  flex: 1;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between; /* Label on left, value on right */
+  align-items: baseline; /* Align text baselines */
+  padding-bottom: 5px; /* Space between rows */
+  border-bottom: 1px dashed #eee; /* Light dashed line for separation */
+}
+
+.detail-item:last-child,
+.detail-item:nth-last-child(2) {
+  /* No border for the last row */
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: #333;
+  flex-shrink: 0; /* Prevent label from shrinking */
+  margin-right: 15px; /* Space between label and value */
+  white-space: nowrap; /* Prevent label from wrapping */
+}
+
+.detail-value {
+  color: #666;
+  text-align: right; /* Align value to the right */
+  flex-grow: 1; /* Allow value to take remaining space */
+  word-break: break-word; /* Break long words */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 20px;
+  }
+  .profile-header {
+    flex-direction: column; /* Stack photo and text vertically */
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .profile-photo-circle {
+    margin-bottom: 15px;
+  }
+  .profile-details-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: 15px;
+  }
+  .detail-item {
+    flex-direction: column; /* Stack label and value vertically */
+    align-items: flex-start; /* Align text to left */
+  }
+  .detail-label {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  .detail-value {
+    text-align: left;
+  }
+}

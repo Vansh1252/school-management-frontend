@@ -1,0 +1,21 @@
+.student-promtion{
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px;
+}
+
+.student-promtion h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.add-promotion-form-grid{
+     display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 equal columns */
+    gap: 25px; /* 10px gap between grid items */
+    margin-bottom: 20px;
+}

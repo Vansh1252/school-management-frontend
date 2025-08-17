@@ -1,0 +1,121 @@
+/* Existing CSS for .accounts-expense, .add-expense, h2 etc. remains the same */
+
+.accounts-expense {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.add-expense {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.add-expense h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 20px; /* Added some bottom margin for spacing */
+}
+
+/* IMPORTANT: This is the primary change for the grid layout.
+   We target the new container class for the form fields.
+*/
+.add-expense-form-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 25px; /* 10px gap between grid items */
+    margin-bottom: 20px; /* Space between form fields and buttons */
+}
+
+/* Adjust styling for form field wrappers, assuming FormField and Fromselect
+   render a div or similar container around their label and input/select.
+   If not, you might need to target input/select directly.
+*/
+.add-expense-form-grid > div { /* This targets the direct children, which are your FormField/Fromselect */
+    display: flex;
+    flex-direction: column;
+}
+
+.add-expense-form-grid label {
+    font-size: 1rem; /* Adjusted font size for labels for better fit */
+    margin-bottom: 5px; /* Space between label and input */
+    color: #555; /* Darker color for labels */
+}
+
+.add-expense-form-grid input,
+.add-expense-form-grid select {
+    padding: 12px 15px; /* Adjusted padding for better fit */
+    border: 1px solid #ddd;
+    background-color: #f9f9f9; /* Lighter background for inputs */
+    font-size: 14px;
+    border-radius: 5px;
+    width: 100%; /* Ensure inputs take full width of their grid cell */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.add-expense-form-grid input:focus,
+.add-expense-form-grid select:focus {
+    border-color: #14238a; /* Highlight border on focus */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(20, 35, 138, 0.2); /* Light blue shadow on focus */
+}
+
+/* Styles for buttons (submit and reset) remain the same, but ensure they are positioned correctly */
+.submit {
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    width: 140px;
+    background-color: #d60a0b;
+    color: #f0f1f3;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit:hover {
+    background-color: #7c0606;
+}
+
+.reset {
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 7px;
+    width: 140px;
+    background-color: #14238a;
+    color: #f0f1f3;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset:hover {
+    background-color: #051372;
+}
+
+/* Remove or comment out the old .add-expense-from styling if it conflicts */
+/*
+.add-expense-from {
+    margin: 20px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 120px;
+}
+
+.add-expense-from label {
+    font-size: 1.5rem;
+}
+.add-expense-from input,
+select {
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #dddeee80;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+*/

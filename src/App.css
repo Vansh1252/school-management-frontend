@@ -1,0 +1,470 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&family=Share+Tech&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* .main-dashboard css */
+.main-dashboard {
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: #14238a;
+  width: 100%;
+  overflow: auto;
+}
+/* .main-container css */
+#root {
+  display: flex;
+}
+
+/* .sidebar */
+.sidebar {
+  max-width: 250px;
+  width: 100%;
+  transition: all 0.3s ease;
+  background-color: #14238a;
+  min-height: 100vh;
+  position: relative;
+}
+
+.sidebar.collapsed {
+  max-width: 80px;
+}
+
+.sidebar.collapsed span {
+  display: none;
+}
+
+.logo img {
+  width: 53px;
+  height: 53px;
+}
+
+/* .topsidebar css */
+.topsidebar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  align-items: center;
+  background-color: #d60a0b;
+}
+
+.icon i {
+  color: white;
+  background-color: #d60a0b;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: calc(100vh - 73px);
+  overflow-y: auto;
+  padding-top: 20px;
+  position: relative;
+}
+
+.sidenav::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidenav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidenav::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.link {
+  border-bottom: 2px solid black;
+  padding: 15px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* max-width: 100%; */
+  padding: 12px 15px;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a,
+.dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  /* display: block; */
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+.sidenav a i {
+  padding: 5px 3px;
+}
+
+.sub-link {
+  padding: 15px;
+  align-items: center;
+  display: flex;
+  justify-content: start;
+  width: 100%;
+
+  /* border-bottom: 2px solid black; */
+}
+.sub-link a {
+  font-size: 1rem;
+}
+/* On mouse-over */
+.sidenav a:hover,
+.dropdown-btn:hover {
+  color: black;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #14238a;
+  color: beige;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #14238a;
+  padding-left: 8px;
+}
+
+.dashboard svg {
+  background-image: url(./assets/dashboard.svg);
+  background-repeat: no-repeat;
+}
+
+.Students svg {
+  background-image: url(./assets/students1.svg);
+  background-repeat: no-repeat;
+}
+.Teachers svg {
+  background-image: url(./assets/teacher.svg);
+  background-repeat: no-repeat;
+  /* align-self: center; */
+}
+.Teachers .icons-right-open svg {
+  background-image: url(../src/assets/Vector.svg);
+  background-repeat: no-repeat;
+}
+.Parents svg {
+  background-image: url(./assets/people.svg);
+  background-repeat: no-repeat;
+  align-self: flex-start;
+}
+.Account svg {
+  background-image: url(../src/assets/Group\ 6.svg);
+  background-repeat: no-repeat;
+  /* align-self: center; */
+}
+.Account {
+  display: flex;
+  flex-direction: column;
+}
+.Students {
+  display: flex;
+  flex-direction: column;
+}
+.Teachers {
+  display: flex;
+  flex-direction: column;
+}
+.account-svg {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.Account .icons-right-open svg {
+  background-image: url(../src/assets/Vector.svg);
+  background-repeat: no-repeat;
+}
+.Subject svg {
+  background-image: url(./assets/book.svg);
+  background-repeat: no-repeat;
+  /* align-self: center; */
+}
+.Settings svg {
+  background-image: url(./assets/settings.svg);
+  background-repeat: no-repeat;
+  /* align-self: center; */
+}
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+}
+
+.admin-dashboard {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main-bar {
+  background-color: #f0f1f3;
+}
+
+.main-header {
+  padding: 20px;
+  background-color: #f0f1f3;
+  min-height: 100vh;
+}
+
+.main-header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.reds-line {
+  height: 5px;
+  width: 55px;
+  background-color: #ff4d4d;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
+}
+
+.main-header p {
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  padding: 20px;
+}
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+.sidebar {
+  width: 14.9%;
+  height: 100vh;
+  background-color: #14238a;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.topsidebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo img {
+  height: 40px;
+}
+
+.sidenav {
+  height: calc(100vh - 72px);
+  overflow-y: auto;
+}
+
+.mobile-menu {
+  padding: 1rem 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.link svg {
+  margin-right: 0.8rem;
+}
+
+.link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 20%;
+    /* max-width: 300px; */
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+  .sidebar.collapsed {
+    width: 60px;
+  }
+
+  .nav-icon {
+    display: block;
+    position: relative;
+    /* top: rem; */
+    left: -1rem;
+    z-index: 1001;
+    background-color: #14238a;
+    border-radius: 4px;
+    padding: 0.5rem;
+  }
+  .link a span {
+    display: none;
+  }
+  .link button span {
+    display: none;
+  }
+  .logo a img {
+    display: none;
+  }
+  .icon .open-icons {
+    display: none;
+  }
+  .icon .close-icon {
+    display: block;
+    color: #14238a;
+  }
+
+  .link {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .sidebar.collapsed .sidenav span,
+  .sidebar.collapsed .dropdown-container,
+  .sidebar.collapsed .fa-caret-down {
+    display: none;
+  }
+
+  .sidebar.collapsed .link svg {
+    margin: 0 auto;
+  }
+
+  .nav-icon {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .topsidebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+  .dropdown-container {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .sub-link a {
+    padding-left: 2.5rem;
+  }
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
