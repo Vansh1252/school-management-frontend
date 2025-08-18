@@ -9,6 +9,6 @@ export default defineConfig({
     }
   },
   preview: {
-    allowedHosts: ['https://school-management-frontend-rjxe.onrender.com', 'localhost']
+    allowedHosts: ['school-management-frontend-rjxe.onrender.com', 'localhost']
   }
 })
