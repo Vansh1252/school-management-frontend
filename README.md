@@ -1,12 +1,89 @@
-# React + Vite
+<h1 align="center">School Management System – Frontend</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  React admin dashboard for running a school: students, teachers, parents, subjects, fees, expenses, events and reminders, all in one place.
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MUI-007FFF?style=for-the-badge&logo=mui&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Ant_Design-0170FE?style=for-the-badge&logo=antdesign&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white"/>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Backend API: [school-mangement-backend-](https://github.com/Vansh1252/school-mangement-backend-)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- **Auth:** login, forgot password and reset password pages, with cookie-based sessions via Axios
+- **Dashboard:** charts (Chart.js), a calendar and a reminders widget
+- **Students:** list, add, edit and view details
+- **Teachers and parents:** full management with edit and detail modals
+- **Subjects:** subject management
+- **Accounts:** fee groups, student fees and expenses, with add, edit and view modals
+- **Events and reminders:** an event form and a reminders list
+- **My account and settings** pages
+- **Error handling:** 404, 500 and generic error pages
+
+## Tech stack
+
+| Area | Tools |
+|---|---|
+| Framework | React + Vite |
+| Routing | React Router |
+| UI | Material UI, Ant Design, Font Awesome, Lucide, React Icons |
+| Charts | Chart.js with react-chartjs-2 |
+| Calendar | react-calendar |
+| HTTP | Axios (with credentials) |
+| Notifications | react-hot-toast, react-toastify |
+
+## Project structure
+
+~~~text
+src/
+├── App.jsx            # Routes
+├── main.jsx           # Entry point
+├── components/        # Header, sidebar, footer, loader, event form, reminders
+├── lib/axios.js       # API client
+└── pages/
+    ├── dashboard/
+    ├── students/
+    ├── teachers/
+    ├── parents/
+    ├── subjects/
+    ├── accounts/      # Fees, fee groups, expenses
+    ├── settings/
+    ├── login, forgot_password, resetpassword
+    └── NotFound, ServerError, ErrorPages
+~~~
+
+## Getting started
+
+**Prerequisites:** Node.js 18+ and the backend API running
+
+~~~bash
+git clone https://github.com/Vansh1252/school-management-frontend.git
+cd school-management-frontend
+npm install
+~~~
+
+Create a `.env` file:
+
+~~~env
+VITE_API_BASE_URL=http://localhost:5000
+~~~
+
+Run it:
+
+~~~bash
+npm run dev       # dev server
+npm run build     # production build
+npm run preview   # preview the build
+~~~
+
+## Author
+
+**Vansh Jain**: [GitHub](https://github.com/Vansh1252) · sanklechav65@gmail.com
